@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --black: #101316;
+    --dark: #191e22;
+    --yellow: #f5bd16;
+    --white: #ffffff;
+    --gray: #bfc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+/* ÜST MENÜ */
+
+.header {
+    min-height: 85px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #101316;
+    border-bottom: 1px solid #292d30;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+.header nav {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.header nav a:hover {
+    color: var(--yellow);
+}
+
+.header-phone {
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 13px 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.header-phone:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+/* ANA KAPAK */
+
+.hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 65px 5%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, rgba(10,13,16,.94), rgba(10,13,16,.65), rgba(10,13,16,.08)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800")
+        center 55% / cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    bottom: -100px;
+    width: 120px;
+    height: 600px;
+    background: var(--yellow);
+    transform: rotate(28deg);
+    opacity: .85;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--yellow);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.13;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--yellow);
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #eeeeee;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 530px;
+    margin-bottom: 27px;
+}
+
+/* SARI BUTON */
+
+.yellow-button {
+    display: inline-block;
+    background: var(--yellow);
+    color: #111;
+    padding: 16px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.yellow-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* HİZMETLER */
+
+.services {
+    background: #f4f4f4;
+    color: #111;
+    padding: 65px 4%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-title p {
+    color: #b68a00;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 37px;
+    font-weight: 900;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.service-card {
+    background: white;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.service-card:hover img {
+    transform: scale(1.04);
+}
+
+.service-card h3 {
+    padding: 19px 17px;
+    font-size: 17px;
+    font-weight: 800;
+    border-top: 3px solid var(--yellow);
+}
+
+/* HAKKIMIZDA */
+
+.about {
+    background:
+        linear-gradient(90deg, #101316 0%, rgba(16,19,22,.92) 45%, rgba(16,19,22,.65)),
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1500")
+        center / cover no-repeat;
+
+    padding: 90px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-content {
+    max-width: 620px;
+}
+
+.about h2 {
+    font-size: 43px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.about-content > p:not(.eyebrow) {
+    color: #dedede;
+    line-height: 1.8;
+    margin-bottom: 27px;
+}
+
+.about-features {
+    min-width: 240px;
+}
+
+.about-features p {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 22px 0;
+}
+
+.about-features p::first-letter {
+    color: var(--yellow);
+}
+
+/* İLETİŞİM */
+
+.contact {
+    text-align: center;
+    padding: 75px 20px;
+    background: #191e22;
+}
+
+.contact h2 {
+    font-size: clamp(25px, 4vw, 38px);
+    margin-bottom: 25px;
+}
+
+.contact .yellow-button {
+    margin-bottom: 25px;
+}
+
+.contact > p:last-child,
+.contact > p:nth-last-child(2) {
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+/* ALT BİLGİ */
+
+footer {
+    background: #0b0d0f;
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+    .header {
+        justify-content: center;
+        padding: 18px 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .header nav {
+        gap: 15px;
+    }
+
+    .header nav a {
+        font-size: 11px;
+    }
+
+    .header-phone {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 55px 7%;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 50px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card img {
+        height: 210px;
+    }
+
+    .about {
+        padding: 60px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .about h2 {
+        font-size: 34px;
+    }
+
+    .about-features {
+        min-width: auto;
+    }
+}/* PROJELER GALERİSİ */
+
+.projects {
+    background: #111518;
+    padding: 75px 5%;
+}
+
+.projects .section-title {
+    color: white;
+}
+
+.projects .section-title span {
+    display: block;
+    color: #aaa;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1350px;
+    margin: 40px auto 0;
+}
+
+.project-card {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    border-radius: 13px;
+    background: #222;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,.95));
+}
+
+.project-info span {
+    color: #f5bd16;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.project-info h3 {
+    color: white;
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        height: 280px;
+    }
+}
