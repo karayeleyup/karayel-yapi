@@ -468,7 +468,335 @@ footer {
 @media (max-width: 700px) {
     .project-grid {
         grid-template-columns: 1fr;
+    }/* =================================
+   KARAYEL YAPI - PROFESYONEL GÜNCELLEME
+================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(16, 19, 22, .97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+.header nav a {
+    white-space: nowrap;
+    transition: color .25s ease;
+}
+
+.header nav a:hover {
+    color: #f5bd16;
+}
+
+.hero {
+    min-height: 570px;
+    background-position: center;
+}
+
+.hero-content {
+    animation: heroEnter .8s ease both;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.project-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.service-card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+/* Galeri sınıfı düzeltmesi */
+.project-none {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1350px;
+    margin: 40px auto 0;
+}
+
+#konum iframe {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* MOBİL TASARIM */
+@media (max-width: 700px) {
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 14px 15px;
+    }
+
+    .header .logo {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 23px;
+    }
+
+    .header-phone {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    .header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 22px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 8px 0;
+        scrollbar-width: none;
+    }
+
+    .header nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header nav a {
+        font-size: 12px;
+        flex: 0 0 auto;
+    }
+
+    .hero {
+        min-height: 510px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .service-card img {
+        height: 145px;
+    }
+
+    .service-card h3 {
+        font-size: 13px;
+        padding: 14px 10px;
+    }
+
+    .project-none {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        height: 270px;
+    }
+
+    .about {
+        padding: 55px 7%;
+    }
+
+    #konum {
+        padding: 50px 5% !important;
+    }
+
+    #konum iframe {
+        height: 300px;
+    }
+
+    .contact {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+/* =================================
+   KARAYEL YAPI - PROFESYONEL GÜNCELLEME
+================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(16, 19, 22, .97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+.header nav a {
+    white-space: nowrap;
+    transition: color .25s ease;
+}
+
+.header nav a:hover {
+    color: #f5bd16;
+}
+
+.hero {
+    min-height: 570px;
+    background-position: center;
+}
+
+.hero-content {
+    animation: heroEnter .8s ease both;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.project-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.service-card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+/* Galeri sınıfı düzeltmesi */
+.project-none {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1350px;
+    margin: 40px auto 0;
+}
+
+#konum iframe {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* MOBİL TASARIM */
+@media (max-width: 700px) {
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 14px 15px;
+    }
+
+    .header .logo {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 23px;
+    }
+
+    .header-phone {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    .header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 22px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 8px 0;
+        scrollbar-width: none;
+    }
+
+    .header nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .header nav a {
+        font-size: 12px;
+        flex: 0 0 auto;
+    }
+
+    .hero {
+        min-height: 510px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .service-card img {
+        height: 145px;
+    }
+
+    .service-card h3 {
+        font-size: 13px;
+        padding: 14px 10px;
+    }
+
+    .project-none {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        height: 270px;
+    }
+
+    .about {
+        padding: 55px 7%;
+    }
+
+    #konum {
+        padding: 50px 5% !important;
+    }
+
+    #konum iframe {
+        height: 300px;
+    }
+
+    .contact {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
     .project-card {
         height: 280px;
